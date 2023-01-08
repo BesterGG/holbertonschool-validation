@@ -42,3 +42,12 @@ execute the next command:
 ```
 brew install hugo
 ```
+
+## Lifecycle
+
+There are diferents steps:
+
+- Clean the build
+- Create posts
+- Make a new build
+- Help
