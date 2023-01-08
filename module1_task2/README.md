@@ -51,3 +51,26 @@ There are diferents steps:
 - Create posts
 - Make a new build
 - Help
+
+### Clean
+
+```
+make clean
+```
+
+### Create posts
+
+```
+make POST_NAME=file_name_of_post POST_TITLE="Title of the new post" post
+```
+
+### Make a new build
+
+```
+make build
+```
+
+### Help
+```
+make help
+```
