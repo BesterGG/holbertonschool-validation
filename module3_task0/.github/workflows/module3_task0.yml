@@ -3,15 +3,14 @@ schedule:
   - cron: "0 0 * * *"
 on:
 push:
-branches: [main]
-jobs:
-  deploy:
-    name: ${{ github.actor }} is testing out Github Actions
-    runs-on: ubuntu-latest
-    steps:
-      - name: Clone repository
-        uses: actions/checkout@v3
-      - name: Change Working directory
-        run: cd module3_task0
-      - name: Validate makefile
-        run: make help
+  jobs:
+    deploy:
+      name: ${{ github.actor }} is testing out Github Actions
+      runs-on: ubuntu-latest
+      steps:
+        - name: Clone repository
+          uses: actions/checkout@v3
+        - name: Change Working directory
+          run: cd module3_task0
+        - name: Validate makefile
+          run: make help
