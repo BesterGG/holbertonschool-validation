@@ -16,7 +16,7 @@ jobs:
       - name: Make Clean
         run: cd module3_task1 && make clean
       - name: Make Post
-        run: cd module3_task1 && make POST_NAME=file=fi POST_TITLE=fi post
+        run: cd module3_task1 && make POST_NAME=filename POST_TITLE="Title of the new post" post
       - name: Make Build
         run: cd module3_task1 && make build
       - name: Help
