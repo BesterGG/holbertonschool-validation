@@ -7,10 +7,10 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - name: Exec Setup
-        run: cd module3_task1 && ./setup.sh
       - name: Clone repository
         uses: actions/checkout@v3
+      - name: Exec Setup
+        run: cd module3_task1 && ./setup.sh
       - name: Change Working directory
         run: cd module3_task1 && make help
       - name: Make Build
