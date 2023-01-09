@@ -1,7 +1,7 @@
 name: Github Actions Project Awesome Inc
+on:
 schedule:
   - cron: "0 0 * * *"
-on:
 push:
   jobs:
     deploy:
