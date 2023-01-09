@@ -13,11 +13,11 @@ jobs:
         run: cd module3_task1 && ./setup.sh
       - name: Change Working directory
         run: cd module3_task1 && make help
-      - name: Make Build
-        run: cd module3_task1 && make build
-      - name: Make Post
-        run: cd module3_task1 && make POST_NAME=file_name_of_post POST_TITLE="Title of the new post" post
       - name: Make Clean
         run: make clean
+      - name: Make Post
+        run: cd module3_task1 && make POST_NAME=file_name_of_post POST_TITLE="Title of the new post" post
+      - name: Make Build
+        run: cd module3_task1 && make build
       - name: Help
         run: make help
