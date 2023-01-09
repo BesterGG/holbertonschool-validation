@@ -10,13 +10,13 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v3
       - name: Exec Setup
-        run: cd module3_task1 && ./setup.sh
+        run: cd module3_task1 && sudo ./setup.sh
       - name: Change Working directory
         run: cd module3_task1 && make help
       - name: Make Clean
         run: cd module3_task1 && make clean
       - name: Make Post
-        run: cd module3_task1 && ./setup.sh && make post POST_NAME=filename POST_TITLE="Title"
+        run: cd module3_task1 && make post POST_NAME=filename POST_TITLE="Title"
       - name: Make Build
         run: cd module3_task1 && make build
       - name: Help
