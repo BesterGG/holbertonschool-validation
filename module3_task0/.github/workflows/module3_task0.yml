@@ -1,7 +1,9 @@
 name: Github Actions Project Awesome Inc
 schedule:
   - cron: "0 0 * * *"
-on: [push]
+on:
+push:
+branches: [main]
 jobs:
   deploy:
     name: ${{ github.actor }} is testing out Github Actions
