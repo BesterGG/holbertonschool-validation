@@ -1,0 +1,23 @@
+name: module3_task0
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Exec Setup
+        run: cd module3_task1 && ./setup.sh
+      - name: Clone repository
+        uses: actions/checkout@v3
+      - name: Change Working directory
+        run: cd module3_task1 && make help
+      - name: Make Build
+        run: cd module3_task1 && make build
+      - name: Make Post
+        run: cd module3_task1 && make POST_NAME=file_name_of_post POST_TITLE="Title of the new post" post
+      - name: Make Clean
+        run: make clean
+      - name: Help
+        run: make help
