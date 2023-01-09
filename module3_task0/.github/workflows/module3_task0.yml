@@ -1,4 +1,6 @@
 name: Github Actions Project Awesome Inc
+schedule:
+  - cron: "0 0 * * *"
 run-name: ${{ github.actor }} is testing out Github Actions
 on: [push]
 jobs:
@@ -7,3 +9,7 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
+      - name: Change Working directory
+        uses: cd module3_task0
+      - name: Run make help
+        uses: make help
